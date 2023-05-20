@@ -1,0 +1,47 @@
+.section-four-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 30px 0;
+}
+.col {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+
+.hero-img {
+  width: 100%;
+  padding: 50px 0;
+}
+.col-span {
+    position: relative;
+}
+.col-hr {
+    position: absolute;
+    top: -5px;
+    height: 4px;
+    left: 20%;
+    background-color:  #505D7833;
+    width: 10%;
+}
+.col-two {
+    position: relative;
+}
+.donate-line {
+    background-color:  #FFB4B4;
+    height: 6px;
+    border: none;
+    border-radius:30px ;
+}
+.donate-btn {
+    position: absolute;
+    top: -20px;
+    left: 20%;
+      background-color: var(--text-two);
+  color: var(--text-one);
+  padding: 10px 20px;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 5px;
+  font-weight: 600;
+}

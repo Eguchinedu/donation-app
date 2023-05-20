@@ -1,0 +1,50 @@
+.section-two-row {
+    display: flex;
+    flex-direction: column;
+padding: 50px 0;
+  font-family: "Open Sans", sans-serif;
+
+}
+.col-one {
+    width: 50%;
+}
+.col-p {
+    font-weight: 800;
+}
+.col-one > h3 {
+font-weight: 900;
+font-size: 39px;
+line-height: 50px;
+}
+.col-span {
+    position: relative;
+}
+.col-hr {
+    position: absolute;
+    top: -5px;
+    height: 4px;
+    left: 25%;
+    background-color:  #505D7833;
+    width: 10%;
+}
+.col-two {
+    margin: 50px 0 ;
+    position: relative;
+}
+.donate-line {
+    background-color:  #FFB4B4;
+    height: 6px;
+    border: none;
+    border-radius:30px ;
+}
+.donate-btn {
+    position: absolute;
+    top: -3px;
+    left: 80%;
+      background-color: var(--text-two);
+  color: var(--text-one);
+  padding: 10px 20px;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 5px;
+  font-weight: 600;
+}

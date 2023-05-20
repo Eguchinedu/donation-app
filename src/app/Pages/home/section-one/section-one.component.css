@@ -1,0 +1,71 @@
+.section-one-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 60px 0 20px 0;
+}
+.col {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+
+.hero-img {
+  max-width: 80%;
+  padding: 50px 0;
+}
+.col h1 {
+  font-size: 60px;
+  line-height: 90px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  color: var(--text-two);
+}
+.title-one {
+  background-color: var(--tertiary-two);
+  border-radius: 20px;
+  padding: 0 10px 10px 10px;
+}
+.title-two {
+  background-color: #c5cb93;
+  border-radius: 20px;
+  padding: 0 10px 10px 10px;
+}
+.col p {
+  color: var(--text-two);
+  font-size: 18px;
+  line-height: 30px;
+  font-family: "Open Sans", sans-serif;
+}
+.elipse {
+  text-align: center;
+}
+.hero-img {
+  width: 100%;
+}
+.donate-btn {
+  border: none;
+  background-color: var(--text-two);
+  color: var(--text-one);
+  padding: 12px 18px;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 10px;
+  font-weight: 600;
+}
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 1024px) {
+    .col h1 {
+  font-size: 40px;
+  line-height: 60px;
+}
+.col p {
+  font-size: 12px;
+  line-height: 20px;
+}
+}
+@media only screen and (max-width: 768px) {
+
+}
+ @media only screen and (max-width: 480px) {
+ }

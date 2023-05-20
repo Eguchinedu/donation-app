@@ -1,0 +1,13 @@
+:host {
+--primary-color: #505D78;
+--secondary-color:  #2F4858;
+--tertiary-color: #FFB4B4;
+--tertiary-two: #D89AB0;
+--bg-one:  #444444;
+--text-one:  #000000;
+--text-two:  #FFFFFF;
+}
+
+.footer{
+    background-color: var(--bg-one);
+}

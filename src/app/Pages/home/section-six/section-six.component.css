@@ -1,0 +1,79 @@
+* {
+    color: var(--text-one);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    padding: 70px 0;
+}
+.section-heading {
+    font-size: 24px;
+    font-weight: 500;
+}
+.section-six-row{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.section-title {
+    font-size: 39px;
+    line-height: 50px;
+    font-weight: 800;
+}
+.section-profile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+.section-profile > p  {
+    font-size: 20px;
+    line-height:28px;
+    font-weight: 900;
+}
+.section-img {
+    margin: 20px 0;
+}
+.section-img > img {
+    width: 100px;
+    border-radius: 50%;
+}
+.carousel-control-next-icon{
+    border: 1px solid white;
+}
+
+/* ::ng-deep carousel
+.span.icon-next.carousel-control-next-icon{
+    display: none !important;
+} */
+
+:host ::ng-deep carousel .sr-only {
+    display: none !important;
+}
+:host ::ng-deep carousel .carousel-control-next-icon{
+    border: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--text-two);
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 30px;
+}
+:host ::ng-deep carousel .carousel-control-prev-icon{
+    border: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--text-two);
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 30px;
+}
+
+.section-desc {
+    width: 730px;
+    align-self: center;
+    line-height: 30px;
+    font-size: 18px;
+    margin: 30px 0;
+    font-weight: 500;
+}
