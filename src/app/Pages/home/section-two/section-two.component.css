@@ -27,24 +27,17 @@ line-height: 50px;
     background-color:  #505D7833;
     width: 10%;
 }
-.col-two {
-    margin: 50px 0 ;
-    position: relative;
+@media only screen and (max-width: 1200px) {
 }
-.donate-line {
-    background-color:  #FFB4B4;
-    height: 6px;
-    border: none;
-    border-radius:30px ;
+@media only screen and (max-width: 1024px) {
 }
-.donate-btn {
-    position: absolute;
-    top: -3px;
-    left: 80%;
-      background-color: var(--text-two);
-  color: var(--text-one);
-  padding: 10px 20px;
-  font-family: "Open Sans", sans-serif;
-  border-radius: 5px;
-  font-weight: 600;
+@media only screen and (max-width: 768px) {
+    .section-two-row{
+        text-align: center;
+    }
+    .col-one {
+        width: 100%;
+    }
 }
+ @media only screen and (max-width: 480px) {
+ }

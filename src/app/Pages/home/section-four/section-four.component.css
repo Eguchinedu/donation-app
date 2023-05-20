@@ -25,23 +25,19 @@
     background-color:  #505D7833;
     width: 10%;
 }
-.col-two {
-    position: relative;
+@media only screen and (max-width: 1200px) {
 }
-.donate-line {
-    background-color:  #FFB4B4;
-    height: 6px;
-    border: none;
-    border-radius:30px ;
+@media only screen and (max-width: 1024px) {
 }
-.donate-btn {
-    position: absolute;
-    top: -20px;
-    left: 20%;
-      background-color: var(--text-two);
-  color: var(--text-one);
-  padding: 10px 20px;
-  font-family: "Open Sans", sans-serif;
-  border-radius: 5px;
-  font-weight: 600;
+@media only screen and (max-width: 768px) {
+  .section-four-row {
+    flex-direction: column;
+    text-align: center;
+  }
 }
+ @media only screen and (max-width: 480px) {
+  .section-four-row {
+
+    padding: 40px;
+  }
+ }
