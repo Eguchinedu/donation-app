@@ -17,7 +17,7 @@ export class SectionFiveComponent implements OnInit {
     this.processService.getProcess().subscribe({
       next: (process) => {
         this.processes = process;
-        console.log(process)
+        console.log(process);
       },
       error: (err) => (this.errorMessage = err),
     });

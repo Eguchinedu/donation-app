@@ -1,0 +1,77 @@
+<div class="donate-header">
+  <div class="donate">
+    <h1 class="dtn">Donate</h1>
+  </div>
+</div>
+<div class="container">
+  <div class="donate-body">
+    <p>
+      Lorem Vulputate eu scelerisque felis imperdiet proin fermentum leo. Est
+      lorem ipsum dolor sit. Vulputate eu scelerisque felis imperdiet proin
+      fermentum leo. Est lorem ipsum dolor sit. Vulputate eu scelerisque
+    </p>
+    <p>
+      Lorem Vulputate eu scelerisque felis imperdiet proin fermentum leo. Est
+      lorem ipsum dolor sit. Vulputat eu
+    </p>
+    <p>
+      Lorem Vulputate eu scelerisque felis imperdiet proin fermentum leo. Est
+      lorem ipsum dolor sit. Vulputate eu scelerisque felis imperdiet proin
+      fermentum leo. Est lorem ipsum dolor sit. Vulputate eu scelerisque
+    </p>
+    <div class="donate-hero-two">
+      <img src="../../../assets/images/donate-two.png" />
+    </div>
+  </div>
+  <div class="donate-form">
+    <form  #form="ngForm" action="" (ngSubmit)="onSubmit(form)">
+      <div class="form-group">
+        <label id="example-radio-group-label" class="donate-amt">Donation Amount</label>
+        <div
+        class="alert alert-danger"
+        [hidden]="!postError"
+      >
+        {{postErrorMessage}}
+      </div>
+        <mat-radio-group
+          aria-labelledby="example-radio-group-label"
+          class="example-radio-group"
+          [(ngModel)]="donate.donationAmt"
+          name="favoriteSeason"
+          required
+        >
+          <mat-radio-button
+            class="example-radio-button"
+            *ngFor="let amount of amounts"
+            [value]="amount"
+          >
+            {{ amount  }}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <!-- {{donate.donationAmt }}
+      {{donate.otherAmt | currency:'USD':'symbol':'1.0-0'}} -->
+      <div class="form-group">
+        <label for="other">If "Other" please use "Other Amount" field</label>
+        <div class="form-section">
+            <div class="form-dollar">
+                <p>$</p>
+            </div>
+            <input type="text" id="other" name="other" placeholder="Other Amount" class="other" [(ngModel)]="donate.otherAmt"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <select
+          class="form-control"
+          id="contact-type"
+          name="subscriptionType"
+        >
+          <option value="contact">Contact (optional)</option>
+        </select>
+      </div>
+      <div class="proceed-button">
+          <button class="proceed-btn">Proceed</button>
+      </div>
+    </form>
+  </div>
+</div>

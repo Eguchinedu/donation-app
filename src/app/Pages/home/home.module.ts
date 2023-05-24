@@ -22,7 +22,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     SectionFiveComponent,
     SectionSixComponent,
   ],
-  imports: [CommonModule, FormsModule, CarouselModule.forRoot()],
+  imports: [CommonModule, FormsModule, CarouselModule.forRoot(),],
   exports: [FormsModule],
 })
 export class HomeModule {}

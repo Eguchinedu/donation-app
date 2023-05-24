@@ -69,4 +69,12 @@ width: 240px;
   }
 }
  @media only screen and (max-width: 480px) {
+    .col-img-one {
+    height: 200px;
+width: 195px;
+  }
+  .col-img-two {
+    height: 150px;
+width: 145px;
+  }
  }

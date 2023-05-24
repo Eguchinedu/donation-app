@@ -1,0 +1,116 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.donate {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+    background-image: url("../../../assets/images/donate-one.png");
+  background-position: center; 
+  background-repeat: no-repeat;
+    background-size: cover; 
+}
+.donate-body {
+  margin-top: 30px;
+}
+.dtn {
+  position: relative;
+  line-height: 60px;
+  color: var(--text-two);
+  font-size: 80px;
+}
+.donate-hero-two {
+  width: 100%;
+  margin: 20px 0;
+}
+.donate-hero-two > img {
+width: 100%;
+}
+.donate-amt {
+  font-weight: 900;
+}
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.example-radio-button {
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 8px;
+  background: #D9D9D9;
+}
+:host ::ng-deep mat-radio-group .mdc-radio__background{
+  background-color: white;
+  border-radius: 50%;
+}
+:host ::ng-deep mat-radio-group .mat-mdc-radio-button .mdc-radio .mdc-radio__native-control:enabled:not(:checked)+.mdc-radio__background .mdc-radio__outer-circle{
+  border-color: white;
+}
+:host ::ng-deep mat-radio-group .mat-mdc-radio-button .mdc-radio .mdc-radio__native-control:enabled:checked+.mdc-radio__background .mdc-radio__outer-circle {
+  border-color: var(--tertiary-color);
+}
+:host ::ng-deep mat-radio-group .mat-mdc-radio-button .mdc-radio:hover .mdc-radio__native-control:enabled+.mdc-radio__background .mdc-radio__inner-circle {
+  border-color: var(--tertiary-color);
+}
+:host ::ng-deep mat-radio-group .mat-mdc-radio-button .mdc-radio .mdc-radio__native-control:enabled+.mdc-radio__background .mdc-radio__inner-circle{
+  border-color: var(--tertiary-color);
+}
+.form-section {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.form-dollar {
+  padding: 0 15px;
+}
+.form-dollar > p {
+  margin: 0px;
+  font-weight: 900;
+}
+.other {
+  padding: 3px 10px;
+  width: 50%;
+}
+.form-group {
+  margin: 40px 0;
+}
+.proceed-button {
+  text-align: center;
+  margin: 30px 0;
+}
+.proceed-btn {
+  width: 80%;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  padding: 10px 0;
+  color: white;
+}
+.alert {
+  font-weight: 800;
+}
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 1024px) {
+      .ctc {
+    font-size: 70px;
+  }
+
+}
+@media only screen and (max-width: 768px) {
+
+  .ctc {
+    font-size: 40px;
+  }
+}
+ @media only screen and (max-width: 480px) {
+  .donate {
+    height: 20vh;
+  }
+ }
