@@ -108,9 +108,12 @@ width: 100%;
   .ctc {
     font-size: 40px;
   }
+  .other {
+  width: 100%;
+}
 }
  @media only screen and (max-width: 480px) {
   .donate {
-    height: 20vh;
+    height: 30vh;
   }
  }
