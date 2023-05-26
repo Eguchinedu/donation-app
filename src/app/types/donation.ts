@@ -1,5 +1,6 @@
 export interface IDonation {
- donationAmt: string | null;
- otherAmt: number | null;
- contact: string | null;
+ name: string | null;
+ email: string | null;
+ amount: number | null;
+ count: number;
 }

@@ -24,53 +24,129 @@
     </div>
   </div>
   <div class="donate-form">
-    <form  #form="ngForm" action="" (ngSubmit)="onSubmit(form)">
-      <div class="form-group">
-        <label id="example-radio-group-label" class="donate-amt">Donation Amount</label>
-        <div
-        class="alert alert-danger"
-        [hidden]="!postError"
-      >
-        {{postErrorMessage}}
-      </div>
-        <mat-radio-group
-          aria-labelledby="example-radio-group-label"
-          class="example-radio-group"
-          [(ngModel)]="donate.donationAmt"
-          name="favoriteSeason"
-          required
-        >
-          <mat-radio-button
-            class="example-radio-button"
-            *ngFor="let amount of amounts"
-            [value]="amount"
-          >
-            {{ amount  }}
-          </mat-radio-button>
-        </mat-radio-group>
-      </div>
-      <!-- {{donate.donationAmt }}
-      {{donate.otherAmt | currency:'USD':'symbol':'1.0-0'}} -->
-      <div class="form-group">
-        <label for="other">If "Other" please use "Other Amount" field</label>
-        <div class="form-section">
-            <div class="form-dollar">
-                <p>$</p>
+    <div class="form-header">
+      <h2>DONATE FORM</h2>
+      <p>Please fill in your details below or check the "Donate anonymously" box to donate anonymously</p>
+    </div>
+    <form #form="ngForm" action="" (ngSubmit)="onSubmit(form)">
+      <div class="details-anon" *ngIf="!isAnonymous">
+        <div class="input-row">
+          <div class="inputGroup">
+            <label for="name" class="label-name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              placeholder="Enter your name"
+              [(ngModel)]="donate.name"
+              #nameField="ngModel"
+              [class.field-error]="form.submitted && nameField.invalid"
+            />
+            <div
+              [hidden]="!form.submitted || nameField.valid"
+              class="alert alert-danger"
+            >
+              Please enter your name or check the box below to donate
+              anonymously
             </div>
-            <input type="text" id="other" name="other" placeholder="Other Amount" class="other" [(ngModel)]="donate.otherAmt"/>
+          </div>
+          <div class="inputGroup">
+            <label for="email" class="label-name">Email Address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="Enter your email"
+              [(ngModel)]="donate.email"
+              #emailField="ngModel"
+              [class.field-error]="form.submitted && emailField.invalid"
+            />
+            <div
+              [hidden]="!form.submitted || emailField.valid"
+              class="alert alert-danger"
+            >
+              Please enter your email or check the box below to donate
+              anonymously
+            </div>
+          </div>
         </div>
       </div>
-      <div class="form-group">
-        <select
-          class="form-control"
-          id="contact-type"
-          name="subscriptionType"
-        >
-          <option value="contact">Contact (optional)</option>
-        </select>
+      <div class="Amount-section">
+          <div class="input-section" *ngIf="!written">
+            <label for="amount" class="label-name">Amount :</label>
+            <div class="counter-section">
+              <div class="counter-button">
+                <button [disabled]="donate.count === 1" (click)="decrement($event)" class="count-btn">
+                  <i class="bi bi-dash-square" ></i>
+                </button>
+  
+                <p>{{ donate.count }}</p>
+                <button (click)="increment($event)" class="count-btn">
+                  <i class="bi bi-plus-square" ></i>
+                </button>
+              </div>
+              <div class="counter-item">
+                <p>Laptop(s)</p>
+              </div>
+              <div class="counter-amount">
+                 <input
+              type="text"
+              id="amount"
+              name="amount"
+              required
+              [(ngModel)]="donate.amount"
+              #amount="ngModel"
+              [class.field-error]="form.submitted && amount.invalid"
+              [value]="donate.amount"
+              readonly
+            />
+                <!-- <p>{{ item.amount | currency : "NGN" : "symbol" : "1.0-0" }}</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="inputGroup" *ngIf="written">
+        <label for="amount" class="label-name">Amount</label>
+            <input
+              type="text"
+              id="amount"
+              name="amount"
+              required
+              min.value="1000"
+              placeholder="Enter Amount"
+              [(ngModel)]="donate.amount"
+              #amount="ngModel"
+              [class.field-error]="form.submitted && amount.invalid"
+            />
+            <div
+              [hidden]="!form.submitted || amount.valid"
+              class="alert alert-danger"
+            >
+              Please enter amount
+            </div>
+          </div>
+      </div>
+      <div class="inputGroup2">
+        <input
+          type="checkbox"
+          name="enterAmount"
+          id="enterAmount"
+          (change)="typeAmount($event)"
+        />
+        <label for="enterAmount" class="label-name">Type in Amount</label>
+      </div>
+      <div class="inputGroup2">
+        <input
+          type="checkbox"
+          name="isAnonymous"
+          id="isAnonymous"
+          (change)="isAnon($event)"
+        />
+        <label for="isAnonymous" class="label-name">Donate Anonymously</label>
       </div>
       <div class="proceed-button">
-          <button class="proceed-btn">Proceed</button>
+        <button class="proceed-btn">DONATE</button>
       </div>
     </form>
   </div>
