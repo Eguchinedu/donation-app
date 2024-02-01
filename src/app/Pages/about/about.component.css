@@ -1,0 +1,71 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.donate {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+    background-image: url("../../../assets/images/donate-one.png");
+  background-position: center; 
+  background-repeat: no-repeat;
+    background-size: cover; 
+}
+.donate-body {
+  margin-top: 30px;
+}
+.dtn {
+  position: relative;
+  line-height: 60px;
+  color: var(--text-two);
+  font-size: 80px;
+}
+.donate-hero-two {
+  width: 100%;
+  margin: 20px 0;
+}
+.donate-hero-two > img {
+width: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 1024px) {
+      .dtn {
+    font-size: 70px;
+  }
+  .counter-section {
+  width: 60%;
+  
+}
+
+}
+@media only screen and (max-width: 768px) {
+
+  .dtn {
+    font-size: 40px;
+  }
+  .other {
+  width: 100%;
+}
+.input-section {
+  flex-direction: column;
+}
+  .counter-section {
+  width: 100%;
+  
+}
+}
+ @media only screen and (max-width: 480px) {
+  .donate {
+    height: 30vh;
+  }
+  .counter-section{
+    flex-direction: column;
+  }
+  .counter-item {
+    margin: 10px 0;
+  }
+ }

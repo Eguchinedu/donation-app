@@ -10,12 +10,14 @@ import { ContactModule } from './Pages/contact/contact.module';
 import { DonateModule } from './Pages/donate/donate.module';
 import { MatRadioModule } from '@angular/material/radio';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AboutComponent } from './Pages/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
