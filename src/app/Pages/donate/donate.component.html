@@ -146,7 +146,7 @@
         <label for="isAnonymous" class="label-name">Donate Anonymously</label>
       </div>
       <div class="proceed-button">
-        <button class="proceed-btn">DONATE</button>
+        <button class="proceed-btn" [disabled]="isLoading">DONATE</button>
       </div>
     </form>
   </div>

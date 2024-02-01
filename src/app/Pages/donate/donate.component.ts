@@ -8,7 +8,7 @@ import { IDonation } from 'src/app/types/donation';
   styleUrls: ['./donate.component.css'],
 })
 export class DonateComponent implements OnInit {
-
+  isLoading: boolean = false;
   originalDonate: IDonation = {
     name: null,
     email: null,
@@ -44,7 +44,6 @@ export class DonateComponent implements OnInit {
     ev.preventDefault();
     
     this.written = ev.target.checked;
-    console.log('written:',this.written);
 
     if(this.written){
       this.donate.amount = null;
@@ -100,15 +99,18 @@ export class DonateComponent implements OnInit {
   onSubmit(form: NgForm) {
     console.log('in onSubmit: ', form.value);
     if (form.valid) {
+      this.isLoading = true;
       // this.dataService.postUserSettingsForm(this.userSettings).subscribe(
       //   result => console.log('success: ', result),
       //   error => this.onHttpError(error),
       //   );
       this.postError = false;
       this.postErrorMessage = '';
+      this.isLoading = false;
     } else {
       this.postError = true;
       this.postErrorMessage = 'Please select or type in amount';
+      this.isLoading = false
     }
   }
 }
