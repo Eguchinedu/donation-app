@@ -13,7 +13,15 @@ More People with you
        Our Goal is to provide 1000 laptops to tech newbies across Nigeria and Africa within the next 3 years
 
         </p>
+
+        <div class="stat-cards">
+          <div class="stat-card" *ngFor="let card of statcards">
+            <p class="title">{{card.title}}</p>
+            <p class="stat">{{card.stat}}</p>
+          </div>
+        </div>
       </div>
+
       <div class="col">
         <img class="hero-img" src='../../../../assets/images/hero-two.png' alt="heroimg" />
       </div>
